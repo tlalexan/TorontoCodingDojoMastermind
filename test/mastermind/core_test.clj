@@ -11,5 +11,7 @@
     (is (= [0 2] (score [:y :y :r :r] [:b :b :y :y]))))
   (testing "guess 1 position "
     (is (= [1 0] (score [:r :y :y :y] [:r :g :g :g]))))
+  (testing "guess 1 position exists at another location"
+    (is (= [1 0] (score [:r :y :r :y] [:r :g :g :g]))))
   (testing "guess 1 position 1 color"
     (is (= [1 1] (score [:r :b :y :y] [:r :g :b :g])))))
